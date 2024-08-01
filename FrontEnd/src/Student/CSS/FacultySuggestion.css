@@ -1,0 +1,836 @@
+/* Importing fonts from Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Julee&family=Just+Another+Hand&family=Kaushan+Script&family=Lobster&family=Pacifico&family=Playpen+Sans&family=Poppins&family=Prosto+One&family=Rampart+One&family=RocknRoll+One&family=Ubuntu&display=swap");
+
+/* Resetting default styles for all elements */
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+/* Define custom CSS variables for font families */
+:root {
+  --justAnotherHand: "Just Another Hand", cursive;
+  --kaushan: "Kaushan Script", cursive;
+  --lobster: "Lobster", sans-serif;
+  --pacifio: "Pacifico", cursive;
+  --playplen: "Playpen Sans", cursive;
+  --poppins: "Poppins", sans-serif;
+  --rocknRoll: "RocknRoll One", sans-serif;
+  --ubuntu: "Ubuntu", sans-serif;
+  --julee: "Julee", cursive;
+  --prosto: "Prosto One", sans-serif;
+  --rampart: "Rampart One", sans-serif;
+  --poetsen: "Poetsen One", sans-serif;
+}
+
+/* Styling for the faculty-suggestion-container */
+.faculty-suggestion-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Styling for the topBar section */
+.topBar {
+  width: 100%;
+  padding: 20px 10px;
+  display: flex;
+  justify-content: space-between !important;
+  align-items: center;
+}
+
+.topBar button {
+  font-family: var(--prosto);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 5px;
+}
+
+/* Styling for the home-btn */
+.topBar .home-btn {
+  width: 100px;
+  height: 40px;
+  background-color: #1784c7;
+  margin-left: 25px;
+}
+
+.topBar .home-btn img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+/* Styling for the add-suggestion-btn */
+.topBar .add-suggestion-btn {
+  background-color: #00ca80;
+  height: 40px;
+  padding: 0px 10px;
+  margin-right: 25px;
+}
+
+.faculty-suggestion-container .filters {
+  width: 80vw;
+  padding: 10px 0px;
+  margin: 20px 0px;
+  background-color: #f7f8fc;
+  display: flex;
+  align-items: center;
+}
+
+/* Styling for the leftSide of filters */
+.filters .leftSide {
+  width: 40%;
+}
+
+.leftSide .filters-searchBar {
+  width: 80%;
+  margin-left: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.filters-searchBar img {
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  background-color: white;
+}
+
+.filters-searchBar input {
+  height: 30px;
+  border: none;
+  font-family: var(--rocknRoll);
+}
+
+.filters-searchBar input:focus {
+  outline: none;
+}
+
+/* Styling for the rightSide of filters */
+.filters .rightSide {
+  width: 60%;
+  display: flex;
+  justify-content: flex-end;
+  column-gap: 15px;
+}
+
+.rightSide .filter input {
+  height: 30px;
+  border: none;
+  padding: 0px 5px;
+  font-family: var(--rocknRoll);
+}
+
+.rightSide .filter:last-child {
+  margin-right: 15px;
+}
+
+.filters input:hover {
+  outline: 2px solid black;
+}
+
+/* Styling for the faculty-suggestion-table */
+.faculty-suggestion-container .faculty-suggestion-table {
+  width: 80vw;
+  margin: 20px 0px;
+}
+
+.faculty-suggestion-table table {
+  width: 100%;
+  font-family: var(--playplen);
+  border: 2px solid black;
+}
+
+table thead {
+  background-color: #36304a;
+  color: white;
+}
+
+table tbody tr:hover {
+  background-color: #0342ff;
+  color: white;
+  transition: all 0.2s linear 0s;
+}
+
+table tbody tr:nth-of-type(even) {
+  background-color: #f7f8fc;
+  color: black !important;
+}
+
+table tbody tr:nth-of-type(even):hover {
+  background-color: #0342ff;
+  color: white;
+  transition: all 0.2s linear 0s;
+}
+
+table tbody td:nth-last-child(1){
+  background-color: gold;
+}
+
+table tbody td .rating-btn{
+  width: 80%;
+  height: 80%;
+  border-radius: 5%;
+  font-family: var(--poppins);
+  font-size: 1em;
+  font-weight: 700;
+}
+
+table tbody td {
+  text-align: center;
+  padding: 5px 0px;
+}
+
+/* Styling for the table-filters */
+.table-filters .top-btn {
+  width: 100px;
+  height: 35px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  background-color: gold;
+}
+
+.top-btn a {
+  text-decoration: none;
+  color: black;
+  font-size: 1em;
+  font-family: var(--poppins);
+}
+
+/* Styling for the Suggestion form */
+.suggestion-form-container {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(217, 217, 217, 50%);
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0%;
+}
+
+/* Show class to display the suggestion form */
+.show {
+  display: flex;
+}
+
+.form {
+  width: 50%;
+  height: 500px;
+  background-color: white;
+  border-radius: 10px;
+  border: 2px solid black;
+}
+
+.form .form-header {
+  width: 100%;
+  height: 10%;
+  padding: 0px 25px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  background-color: #00ca80;
+  color: white;
+  font-family: var(--prosto);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.form-header p {
+  padding-right: 275px;
+}
+
+.form form {
+  width: 100%;
+  height: 90%;
+  padding: 50px 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  row-gap: 10%;
+}
+
+.form form .row1 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.form form .row2 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  row-gap: 20px;
+}
+
+.row2 .starRating-input {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.form form .row3 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.row3 button {
+  width: 250px;
+  height: 50px;
+  border-radius: 5px;
+  padding: 0px 10px;
+  background-color: #1784c7;
+  font-family: var(--poppins);
+  color: white;
+  border: none;
+}
+
+.submit-btn {
+  width: 130px;
+  height: 40px;
+  background-color: #00ca80;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-family: var(--poppins);
+}
+
+.form form input {
+  width: 250px;
+  height: 50px;
+  border-radius: 5px;
+  padding: 0px 10px;
+  background-color: #eedd99;
+  font-family: var(--rocknRoll);
+  color: black;
+}
+
+.form form input::placeholder {
+  color: black;
+}
+/* FacultySuggestion.css */
+
+/* Styling for the "Give Rating" button */
+.faculty-suggestion-container .faculty-suggestion-table button {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.faculty-suggestion-container .faculty-suggestion-table button:hover {
+  background-color: #0056b3;
+}
+
+/* Styling for the rating modal */
+.rating-modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.rating-modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 300px;
+  text-align: center;
+}
+
+.rating-modal-content h2 {
+  margin-bottom: 16px;
+}
+
+.rating-modal-content input[type="number"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.rating-modal-content button {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.rating-modal-content button:hover {
+  background-color: #0056b3;
+}
+
+.rating-modal-content .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  color: #aaa;
+}
+
+.rating-modal-content .close:hover {
+  color: #555;
+}
+
+/* Rating modal */
+.rating-modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.rating-modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 300px;
+  text-align: center;
+  position: relative;
+}
+
+.rating-modal-content .close {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.rating-modal-content h2 {
+  margin-bottom: 10px;
+}
+
+.rating-modal-content .star-rating-input {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.rating-modal-content .star-icon {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.rating-modal-content button {
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100px;
+  font-size: 16px;
+}
+
+.star-icon {
+  width: 20px; 
+  height: 20px; 
+  cursor: pointer;
+  margin: 0 2px; 
+}
+
+.star-rating-input {
+  display: flex;
+  align-items: center; 
+}
+
+.star-rating-container {
+  border: 1px solid #ddd;
+  padding: 10px; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  flex-direction: column; 
+  background-color: #f9f9f9; 
+  border-radius: 5px; 
+  width: max-content; /* Adjust width based on content */
+}
+
+.star-rating-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px; 
+}
+
+.star-icon {
+  width: 20px; 
+  height: 20px; 
+  cursor: pointer;
+  margin: 0 2px;
+}
+
+.rating-text {
+  font-size: 16px;
+  font-weight: bold; 
+  color: #000000; 
+  margin-bottom: 5px; 
+}
+
+.close-btn{
+ background-color: #f10000;
+ text-align:20px;
+}
+
+@media (max-width: 768px) {
+  * {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+
+  .faculty-suggestion-container {
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .topBar {
+    width: 100%;
+    padding: 20px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .topBar button {
+    font-family: var(--prosto);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 5px;
+  }
+
+  .topBar .home-btn {
+    height: 40px;
+    padding: 0px 10px;
+    background-color: #1784c7;
+    margin-left: 0px !important;
+  }
+
+  .topBar .home-btn img {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+  }
+
+  .topBar .add-suggestion-btn {
+    background-color: #00ca80;
+    height: 40px;
+    padding: 0px 10px;
+    margin-right: 0px;
+  }
+
+  .faculty-suggestion-container .filters {
+    width: 80%;
+    height: auto;
+    margin: 20px 0px;
+    padding: 10px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    row-gap: 25px;
+  }
+
+  .filters .leftSide {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .filters .leftSide .filters-searchBar {
+    margin-left: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .filters-searchBar img {
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    background-color: white;
+  }
+
+  .filters-searchBar input {
+    height: 30px;
+    border: none;
+    font-family: var(--rocknRoll);
+  }
+
+  .filters-searchBar input:focus {
+    outline: none;
+  }
+
+  .filters .rightSide {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    row-gap: 10px;
+  }
+
+  .rightSide .filter input {
+    height: 30px;
+    border: none;
+    padding: 0px 5px;
+    font-family: var(--rocknRoll);
+  }
+
+  .rightSide .filter:last-child {
+    margin-right: 0px !important;
+  }
+
+  .filters input:hover {
+    outline: 2px solid black;
+  }
+
+  .faculty-suggestion-container .faculty-suggestion-table {
+    width: 80%;
+    margin: 20px 0px;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+  }
+
+  .faculty-suggestion-container .faculty-suggestion-table table {
+    width: 100%;
+    font-family: var(--playplen);
+    font-size: 0.5em;
+    border: 2px solid black;
+  }
+
+  table thead {
+    background-color: #36304a;
+    color: white;
+  }
+
+  table tbody tr:hover {
+    background-color: #0342ff;
+    color: white;
+    transition: all 0.2s linear 0s;
+  }
+
+  table tbody tr:nth-of-type(even) {
+    background-color: #f7f8fc;
+    color: black !important;
+  }
+
+  table tbody tr:nth-of-type(even):hover {
+    background-color: #0342ff;
+    color: white;
+    transition: all 0.2s linear 0s;
+  }
+
+  table tbody td .submit-btn{
+    width: 100px;
+    height: 25px;
+  }
+
+  table tbody td {
+    text-align: center;
+    padding: 2px 0px;
+  }
+
+  table tbody td .rating-btn{
+    width: 80%;
+    height: 50%;
+    border-radius: 5%;
+    font-family: var(--poppins);
+    font-size: 1em;
+    font-weight: 700;
+  }
+
+  .faculty-suggestion-container .table-filters {
+    width: 80vw;
+    font-size: 0.7em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .table-filters .top-btn {
+    width: 100px;
+    height: 35px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    background-color: gold;
+  }
+
+  .top-btn a {
+    text-decoration: none;
+    color: black;
+    font-size: 1em;
+    font-family: var(--poppins);
+  }
+
+  .suggestion-form-container {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(217, 217, 217, 50%);
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0%;
+  }
+
+  .show {
+    display: flex;
+  }
+
+  .form {
+    width: 90%;
+    height: 90%;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid black;
+  }
+
+  .form .form-header {
+    width: 100%;
+    height: 10%;
+    padding: 0px 25px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    background-color: #00ca80;
+    color: white;
+    font-family: var(--prosto);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .form-header p {
+    padding-right: 15px;
+  }
+
+  .form form {
+    width: 100%;
+    height: 90%;
+    padding: 50px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    row-gap: 5%;
+  }
+
+  .form form .row1 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    row-gap: 10px;
+  }
+
+  .form form .row2 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    row-gap: 10px;
+  }
+
+  .row2 .starRating-input {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .form form .row3 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    row-gap: 10px;
+  }
+
+  .row3 button {
+    width: 250px;
+    height: 50px;
+    border-radius: 5px;
+    padding: 0px 10px;
+    background-color: #1784c7;
+    font-family: var(--poppins);
+    color: white;
+    border: none;
+  }
+
+  .confirm-btn {
+    width: 150px;
+    height: 50px;
+    background-color: #00ca80;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-family: var(--poppins);
+  }
+
+  .form form input {
+    width: 75%;
+    height: 50px;
+    border-radius: 5px;
+    padding: 0px 10px;
+    background-color: #eedd99;
+    font-family: var(--rocknRoll);
+    color: black;
+  }
+
+  .form form input::placeholder {
+    color: black;
+  }
+}

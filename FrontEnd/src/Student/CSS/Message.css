@@ -1,0 +1,420 @@
+/* Importing fonts from Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Julee&family=Just+Another+Hand&family=Kaushan+Script&family=Lobster&family=Pacifico&family=Playpen+Sans&family=Poppins&family=RocknRoll+One&family=Ubuntu&display=swap");
+
+/* Resetting default margin, padding, and box-sizing for all elements */
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+:root {
+  --justAnotherHand: "Just Another Hand", cursive;
+  --kaushan: "Kaushan Script", cursive;
+  --lobster: "Lobster", sans-serif;
+  --pacifico: "Pacifico", cursive;
+  --playpen: "Playpen Sans", cursive;
+  --poppins: "Poppins", sans-serif;
+  --rocknRoll: "RocknRoll One", sans-serif;
+  --ubuntu: "Ubuntu", sans-serif;
+  --julee: "Julee", cursive;
+  --prosto: "Prosto One", sans-serif;
+  --rampart: "Rampart One", sans-serif;
+}
+
+.contentContainer {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(62, 69, 76);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contentContainer .topContents {
+  width: 84%;
+  height: 14%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.topContents .btn {
+  width: 200px;
+  height: 45px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(23, 132, 199);
+  color: white;
+  font-family: var(--rocknRoll);
+  font-size: 14px;
+}
+
+.contentContainer .sectionContainer {
+  width: 74%;
+  height: 72%;
+  padding: 20px;
+  text-align: center;
+  background-color: rgb(44, 49, 53);
+  border-radius: 10px;
+  box-shadow: inset 10px 10px 10px rgba(0, 0, 0, 0.25);
+  color: white;
+  font-family: var(--rampart);
+  font-size: 18px;
+}
+
+.sectionContainer .textContent {
+  display: block;
+  transition: all 0.2s linear 0s;
+}
+
+.sectionContainer .meetingForm-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.meetingForm-container .topContents {
+  width: 100%;
+  height: 10%;
+  background-color: rgb(0, 202, 128);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  font-family: var(--prosto);
+  color: black;
+}
+
+.meetingForm-container .meeting-form {
+  width: 100%;
+  height: 90%;
+  background-color: white;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 25px;
+}
+
+.meeting-form .row1 {
+  width: 100%;
+  height: 34%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.row1 input {
+  width: 242px;
+  height: 57px;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: rgb(238, 221, 153);
+  font-family: var(--poppins);
+  font-weight: 700;
+}
+
+.meeting-form .row2 {
+  width: 100%;
+  height: 34%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.row2 input {
+  width: 242px;
+  height: 57px;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: rgb(238, 221, 153);
+  font-family: var(--poppins);
+  font-weight: 700;
+}
+
+.meeting-form .row3 {
+  width: 100%;
+  height: 32%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+}
+
+.meeting-form input::placeholder {
+  color: black;
+  font-family: var(--poppins);
+  font-weight: 900;
+}
+
+.row3 button {
+  width: 175px;
+  height: 45px;
+  padding: 10px;
+  color: white;
+  font-family: var(--poppins);
+  font-weight: 700;
+}
+
+.row3 .abort-btn {
+  background-color: rgb(255, 0, 0);
+}
+
+.row3 .schedule-btn {
+  background-color: rgb(0, 202, 128);
+}
+
+.sectionContainer .messageForm-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.messageForm-container .topContents {
+  width: 100%;
+  height: 10%;
+  background-color: rgb(0, 202, 128);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  font-family: var(--prosto);
+  color: black;
+}
+
+.messageForm-container .message-form {
+  width: 100%;
+  height: 90%;
+  background-color: white;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 25px;
+}
+
+.message-form .row1 {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.row1 textarea {
+  width: 40%;
+  height: 75%;
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: rgb(238, 221, 153);
+  font-family: var(--poppins);
+  font-size: 14px;
+}
+
+.row1 textarea::placeholder {
+  font-family: var(--poppins);
+  font-size: 14px;
+  color: black;
+}
+
+.message-form .row2 {
+  width: 100%;
+  height: 25%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.row2 input {
+  width: 242px;
+  height: 57px;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: rgb(238, 221, 153);
+  font-family: var(--poppins);
+  font-weight: 700;
+}
+
+.message-form .row3 {
+  width: 100%;
+  height: 25%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+}
+
+.row3 button {
+  width: 175px;
+  height: 45px;
+  padding: 10px;
+  color: white;
+  font-family: var(--poppins);
+  font-weight: 700;
+}
+
+.row3 .abort-btn {
+  background-color: rgb(255, 0, 0);
+}
+
+.row3 .send-btn {
+  background-color: rgb(0, 202, 128);
+}
+
+.sectionContainer .meetingHistory-table {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.meetingHistory-table table {
+  width: 100%;
+  border: 2px solid black;
+  font-family: var(--playplen);
+}
+
+table thead {
+  background-color: #36304a;
+  color: white;
+}
+
+table tbody tr:hover {
+  background-color: #0342ff;
+  color: white;
+  transition: all 0.2s linear 0s;
+}
+
+table tbody tr:nth-of-type(even) {
+  background-color: #f7f8fc;
+  color: black !important;
+}
+
+table tbody tr:nth-of-type(even):hover {
+  background-color: #0342ff;
+  color: white;
+  transition: all 0.2s linear 0s;
+}
+
+table tbody td {
+  padding: 5px 0px;
+  text-align: center;
+}
+
+/* Styling for the response button within the table */
+.repeat-btn {
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  background-color: #00c87e;
+  font-family: var(--playplen);
+}
+
+.sectionContainer .messageHistory-table {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.messageHistory-table table {
+  width: 100%;
+  border: 2px solid black;
+  font-family: var(--playplen);
+}
+
+table thead {
+  background-color: #36304a;
+  color: white;
+}
+
+table tbody tr:hover {
+  background-color: #0342ff;
+  color: white;
+  transition: all 0.2s linear 0s;
+}
+
+table tbody tr:nth-of-type(even) {
+  background-color: #f7f8fc;
+  color: black !important;
+}
+
+table tbody tr:nth-of-type(even):hover {
+  background-color: #0342ff;
+  color: white;
+  transition: all 0.2s linear 0s;
+}
+
+table tbody td {
+  padding: 5px 0px;
+  text-align: center;
+}
+
+/* Styling for the response button within the table */
+.repeat-btn {
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  background-color: #00c87e;
+  font-family: var(--playplen);
+}
+
+.contentContainer .bottomContents {
+  width: 74%;
+  height: 14%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bottomContents .toggle-btn {
+  width: 48px;
+  height: 24px;
+  padding: 7px;
+  background-color: transparent;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  cursor: pointer;
+  position: relative;
+}
+
+.toggle-btn .round {
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  transition: all 0.2s linear;
+}
+
+.toggle-btn .right {
+  background-color: black !important;
+}
+
+.bottomContents .logout-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(255, 0, 0);
+  color: white;
+  font-family: var(--rocknRoll);
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.respond-bttn {
+  padding: 8px 16px;
+  background-color: #00c87e;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.respond-bttn:hover {
+  background-color: #007e55;
+}

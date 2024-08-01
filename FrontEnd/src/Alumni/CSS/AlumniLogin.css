@@ -1,0 +1,549 @@
+@import url("https://fonts.googleapis.com/css2?family=Julee&family=Just+Another+Hand&family=Kaushan+Script&family=Lobster&family=Pacifico&family=Playpen+Sans&family=Poppins&family=RocknRoll+One&family=Ubuntu&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+:root {
+  --justAnotherHand: "Just Another Hand", cursive;
+  --kaushan: "Kaushan Script", cursive;
+  --lobster: "Lobster", sans-serif;
+  --pacifio: "Pacifico", cursive;
+  --playplen: "Playpen Sans", cursive;
+  --poppins: "Poppins", sans-serif;
+  --rocknRoll: "RocknRoll One", sans-serif;
+  --ubuntu: "Ubuntu", sans-serif;
+  --julee: "Julee", cursive;
+}
+
+button {
+  cursor: pointer;
+}
+
+.alumniLogin-container {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(75, 121, 161);
+  background-image: url("../Assets/Alumni\ BG2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: #f0f0f0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.alumniLogin-container .topContainer {
+  width: 100%;
+  height: 20%;
+  display: flex;
+}
+
+.topContainer .leftSide {
+  width: 55%;
+  height: 100%;
+  padding-right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.leftSide .logo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+}
+
+.topContainer .rightSide {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.rightSide .home-btn {
+  width: 110px;
+  height: 45px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(255, 0, 0);
+  color: white;
+  font-family: var(--poppins);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.alumniLogin-container .bottomContainer {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bottomContainer .loginContainer {
+  width: 360px;
+  height: 360px;
+  border-radius: 10px;
+  background-color: rgb(183, 157, 146);
+  box-shadow: inset 10px 10px 10px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.loginContainer .firstHalf {
+  width: 80%;
+  height: 60%;
+  padding: 10px;
+}
+
+.loginContainer .secondHalf {
+  width: 100%;
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 10px;
+}
+
+.firstHalf form {
+  width: 100%;
+  height: 100%;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.loginContainer form input {
+  width: 300px;
+  height: 45px;
+  border-radius: 5px;
+  padding: 5px;
+  box-shadow: inset 10px 10px 10px rgba(0, 0, 0, 0.25);
+  background-color: white;
+  font: var(--poppins);
+}
+
+form input::placeholder {
+  font-family: var(--poppins);
+  font-size: 12px;
+}
+
+form button {
+  width: 220px;
+  height: 45px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(24, 119, 242);
+  color: white;
+  font-family: var(--poppins);
+}
+
+.loginContainer .line {
+  width: 100%;
+  border: 1px solid black;
+}
+
+.loginContainer .signup-btn {
+  margin-top: 10px;
+  width: 216px;
+  height: 38px;
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(66, 183, 42);
+  font-family: var(--poppins);
+  color: white;
+  font-weight: 700;
+}
+
+.bottomContainer .signUp-container {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: all 0.2s linear 0s;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.signUp-container .signUp-form {
+  width: 793px;
+  height: 500px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+.signUp-form .topContents {
+  width: 100%;
+  height: 15%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.topContents .formTitle {
+  height: 40px;
+  padding: 5px;
+  border-radius: 5px;
+  font-weight: 900;
+  font-size: 18px;
+  font-family: var(--poppins);
+  border: none;
+  text-align: center;
+  background-color: rgb(217, 229, 255);
+  color: rgb(0, 0, 0, 50%);
+}
+
+.topContents .close-icon {
+  cursor: pointer;
+}
+
+.signUp-form form {
+  width: 100%;
+  height: 85%;
+  display: flex;
+  flex-direction: column;
+}
+
+.signUp-form form input {
+  width: 300px;
+  height: 40px;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: rgb(217, 217, 217);
+  font-family: var(--rocknRoll);
+}
+
+.signUp-form form input::placeholder {
+  font-family: var(--poppins);
+  color: black;
+  font-weight: 800;
+}
+
+.signUp-form form .row1 {
+  width: 100%;
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 10px;
+}
+
+.signUp-form form .row1 .innerrow1 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.signUp-form form .row1 .innerrow2 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.signUp-form form .row2 {
+  width: 100%;
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 10px;
+}
+
+.signUp-form form .row3 {
+  width: 100%;
+  height: 30%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  row-gap: 10px;
+}
+
+.signUp-form form .row4 {
+  width: 100%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.signUp-form form .row4 .signup-btn {
+  border-radius: 5px;
+  border: none;
+  background-color: rgb(64, 123, 255);
+  color: white;
+  font-family: var(--poppins);
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  * {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+
+  .alumniLogin-container {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(75, 121, 161);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .alumniLogin-container .topContainer {
+    width: 100%;
+    height: 30%;
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    row-gap: 25px;
+  }
+
+  .alumniLogin-container .topContainer .leftSide {
+    width: 100%;
+    padding-right: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    order: 2;
+  }
+
+  .topContainer .leftSide .logo {
+    width: 75px;
+    height: 75px;
+    border-radius: 50px;
+  }
+
+  .alumniLogin-container .topContainer .rightSide {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    order: 1;
+  }
+
+  .rightSide .home-btn {
+    width: 110px;
+    height: 45px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(255, 0, 0);
+    color: white;
+    font-family: var(--poppins);
+    font-size: 14px;
+    font-weight: 700;
+  }
+
+  .alumniLogin-container .bottomContainer {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .alumniLogin-container .bottomContainer .loginContainer {
+    width: 80%;
+    height: 360px;
+    border-radius: 10px;
+    background-color: rgb(161, 189, 252);
+    box-shadow: inset 10px 10px 10px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .loginContainer .firstHalf {
+    width: 100%;
+    height: 60%;
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .firstHalf form {
+    width: 90%;
+    height: 100%;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .loginContainer .firstHalf form input {
+    width: 175px;
+    height: 35px;
+  }
+
+  .loginContainer .firstHalf form button {
+    width: 150px;
+    height: 50px;
+  }
+
+  .loginContainer .secondHalf {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .loginContainer .secondHalf button {
+    width: 200px;
+    font-size: 0.8em;
+  }
+
+  .bottomContainer .signUp-container {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: all 0.2s linear 0s;
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .signUp-container .signUp-form {
+    width: 90%;
+    height: 80%;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+
+  .signUp-form .topContents {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .topContents .formTitle {
+    height: 40px;
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: 900;
+    font-size: 18px;
+    font-family: var(--poppins);
+    border: none;
+    text-align: center;
+    background-color: rgb(217, 229, 255);
+    color: rgb(0, 0, 0, 50%);
+  }
+
+  .topContents .close-icon {
+    cursor: pointer;
+  }
+
+  .signUp-form form {
+    width: 100%;
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+
+  .signUp-form form input {
+    width: 150px;
+    height: 35px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: rgb(217, 217, 217);
+    font-family: var(--rocknRoll);
+  }
+
+  .signUp-form form input::placeholder {
+    font-family: var(--poppins);
+    color: black;
+    font-weight: 800;
+  }
+
+  .signUp-form form .row1 {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+  }
+
+  .signUp-form form .row1 .innerrow1 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    row-gap: 5px;
+  }
+
+  .signUp-form form .row1 .innerrow2 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    row-gap: 5px;
+  }
+
+  .signUp-form form .row2 {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 5px;
+  }
+
+  .signUp-form form .row3 {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    row-gap: 5px;
+  }
+
+  .signUp-form form .row4 {
+    width: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+  }
+
+  .signUp-form form .row4 .signup-btn {
+    width: 125px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(64, 123, 255);
+    color: white;
+    font-family: var(--poppins);
+    font-weight: 700;
+  }
+}

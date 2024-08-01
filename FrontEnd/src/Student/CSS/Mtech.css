@@ -1,0 +1,326 @@
+/* Importing Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Julee&family=Just+Another+Hand&family=Kaushan+Script&family=Lobster&family=Pacifico&family=Playpen+Sans&family=Poppins&family=Prosto+One&family=Rampart+One&family=RocknRoll+One&family=Ubuntu&display=swap");
+
+/* Resetting default styles */
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+/* Common stylings and variables */
+:root {
+  --justAnotherHand: "Just Another Hand", cursive;
+  --kaushan: "Kaushan Script", cursive;
+  --lobster: "Lobster", sans-serif;
+  --pacifio: "Pacifico", cursive;
+  --playplen: "Playpen Sans", cursive;
+  --poppins: "Poppins", sans-serif;
+  --rocknRoll: "RocknRoll One", sans-serif;
+  --ubuntu: "Ubuntu", sans-serif;
+  --julee: "Julee", cursive;
+  --prosto: "Prosto One", sans-serif;
+  --rampart: "Rampart One", sans-serif;
+  --poetsen: "Poetsen One", sans-serif;
+}
+
+/* Styling for the main container */
+.mtech-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Styling for the top bar */
+.topBar {
+  width: 100%;
+  padding: 20px 10px;
+  display: flex;
+  justify-content: space-between !important;
+  align-items: center;
+}
+
+/* Styling for buttons in the top bar */
+.topBar button {
+  border: none;
+  border-radius: 5px;
+  font-family: var(--prosto);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 5px;
+}
+
+/* Styling for the home button */
+.topBar .home-btn {
+  width: 100px;
+  height: 40px;
+  margin-left: 25px;
+  background-color: #1784c7;
+}
+
+.topBar .home-btn img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+/* Styling for the contribution button */
+.topBar .contribution-btn {
+  height: 40px;
+  padding: 0px 10px;
+  margin-right: 25px;
+  background-color: #00ca80;
+}
+
+/* Styling for filters section */
+.mtech-container .filters {
+  width: 80vw;
+  margin: 20px 0px;
+  padding: 10px 0px;
+  background-color: #f7f8fc;
+  display: flex;
+  align-items: center;
+}
+
+/* Styling for the left side of filters */
+.filters .leftSide {
+  width: 40%;
+}
+
+.leftSide .filters-searchBar {
+  margin-left: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.filters-searchBar img {
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  background-color: white;
+}
+
+.filters-searchBar input {
+  height: 30px;
+  border: none;
+  font-family: var(--rocknRoll);
+}
+
+.filters-searchBar input:focus {
+  outline: none;
+}
+
+/* Styling for the right side of filters */
+.filters .rightSide {
+  width: 60%;
+  display: flex;
+  justify-content: flex-end;
+  column-gap: 15px;
+}
+
+.rightSide .filter input {
+  height: 30px;
+  border: none;
+  padding: 0px 5px;
+  font-family: var(--rocknRoll);
+}
+
+.filters input:hover {
+  outline: 2px solid black;
+}
+
+/* Styling for the materials table */
+.mtech-container .materials-table {
+  width: 80vw;
+  margin: 20px 0px;
+}
+
+.materials-table table {
+  width: 100%;
+  border: 2px solid black;
+  font-family: var(--playplen);
+}
+
+table thead {
+  background-color: #36304a;
+  color: white;
+}
+
+table tbody tr:hover {
+  background-color: #0342ff;
+  color: white;
+  transition: all 0.2s linear 0s;
+}
+
+table tbody tr:nth-of-type(even) {
+  background-color: #f7f8fc;
+  color: black !important;
+}
+
+table tbody tr:nth-of-type(even):hover {
+  background-color: #0342ff;
+  color: white;
+  transition: all 0.2s linear 0s;
+}
+
+table tbody td {
+  padding: 5px 0px;
+  text-align: center;
+}
+
+/* Styling for table filters section */
+.mtech-container .table-filters {
+  width: 80vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+.table-filters .leftSide {
+  width: 50%;
+}
+
+.leftSide .content-filter {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.content-filter input {
+  width: 50px;
+  border-radius: 5px;
+}
+
+.table-filters .rightSide {
+  display: flex;
+  column-gap: 10px;
+}
+
+.rightSide button {
+  width: 40px;
+  height: 30px;
+  border-radius: 30%;
+  font-weight: 900;
+}
+
+.rightSide .previous-btn {
+  border: 1px solid black;
+  background-color: white;
+  color: #2699fb;
+}
+
+.rightSide .next-btn {
+  border: none;
+  background-color: #2699fb;
+  color: white;
+}
+
+/* Styling for the contribution form container */
+.contribution-form-container {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(217, 217, 217, 50%);
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0%;
+}
+
+.show {
+  display: flex;
+}
+
+/* Styling for the contribution form */
+.cf-form {
+  width: 50%;
+  height: 500px;
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.cf-form .cf-form-header {
+  width: 100%;
+  height: 10%;
+  padding: 0px 25px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  background-color: #00ca80;
+  color: white;
+  font-family: var(--prosto);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.cf-form-header p {
+  padding-right: 275px;
+}
+
+.cf-form form {
+  width: 100%;
+  height: 90%;
+  padding: 50px 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  row-gap: 10%;
+}
+
+.cf-form form .cf-row1 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cf-form form .cf-row2 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  row-gap: 20px;
+}
+
+.cf-row2 input {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.cf-row3 {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.confirm-btn {
+  width: 150px;
+  height: 50px;
+  background-color: #00ca80;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-family: var(--poppins);
+}
+
+.cf-form form input {
+  width: 250px;
+  height: 50px;
+  border-radius: 5px;
+  padding: 0px 10px;
+  background-color: #eedd99;
+  font-family: var(--rocknRoll);
+  color: black;
+}
+
+.cf-form form input::placeholder {
+  color: black;
+}

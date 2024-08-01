@@ -1,0 +1,542 @@
+/* Importing fonts from Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Julee&family=Just+Another+Hand&family=Kaushan+Script&family=Lobster&family=Pacifico&family=Playpen+Sans&family=Poppins&family=Prosto+One&family=Rampart+One&family=RocknRoll+One&family=Ubuntu&family=Waterfall&family=Zen+Tokyo+Zoo&display=swap");
+
+/* Resetting default margin, padding, and box-sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Common stylings and variables using CSS variables */
+:root {
+  --justAnotherHand: "Just Another Hand", cursive;
+  --kaushan: "Kaushan Script", cursive;
+  --lobster: "Lobster", sans-serif;
+  --pacifio: "Pacifico", cursive;
+  --playplen: "Playpen Sans", cursive;
+  --poppins: "Poppins", sans-serif;
+  --rocknRoll: "RocknRoll One", sans-serif;
+  --ubuntu: "Ubuntu", sans-serif;
+  --julee: "Julee", cursive;
+  --prosto: "Prosto One", sans-serif;
+  --rampart: "Rampart One", sans-serif;
+  --poetsen: "Poetsen One", sans-serif;
+  --waterfall: "Waterfall", cursive;
+  --zen-tokyo: "Zen Tokyo Zoo", cursive;
+}
+
+/* Styling for the main container of the profile settings */
+.profile-settings-container {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Styling for the top bar containing navigation and user information */
+.topBar {
+  width: 100%;
+  padding: 20px 10px;
+  display: flex;
+  justify-content: space-between !important;
+  align-items: center;
+}
+
+/* Styling for the left side of the top bar */
+.leftSide {
+  width: 10%;
+}
+
+/* Styling for the right side of the top bar */
+.rightSide {
+  width: 90%;
+}
+
+/* Styling for the user name display section */
+.userNameDisplay {
+  width: 100%;
+  height: 100px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  background-color: #2c3135;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Styling for user greetings */
+.greetings {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 10px;
+}
+
+/* Styling for specific text elements within greetings */
+.greetings p {
+  font-size: 50px;
+  font-family: var(--waterfall);
+}
+
+.greetings h6 {
+  font-size: 50px;
+  font-family: var(--zen-tokyo);
+  font-weight: 300;
+}
+
+/* Styling for the sidebar containing links and credits */
+.sideBar {
+  width: 18.75vw;
+  height: 85vh;
+  background-color: #2c3135;
+  color: white;
+  position: fixed;
+  right: 10px;
+  top: 120px;
+}
+
+/* Styling for the top contents of the sidebar */
+.sideBar .top-contents {
+  height: 40%;
+  padding: 50px 0px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 25px;
+}
+
+/* Styling for link elements within top contents */
+.top-contents .links {
+  width: 200px;
+  padding: 10px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background-color: white;
+  transition: all 0.2s linear 0s;
+}
+
+/* Styling for anchor elements within top contents */
+.top-contents a {
+  text-decoration: none;
+  font-family: var(--rocknRoll);
+  color: black;
+  transition: all 0.2s linear 0s;
+}
+
+/* Hover effect for links within top contents */
+.links-div:hover {
+  background-color: #1784c7;
+  color: white;
+}
+
+.links-div a:hover {
+  color: white;
+}
+
+/* Styling for the bottom contents of the sidebar */
+.sideBar .bottom-contents {
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Styling for the credits card within bottom contents */
+.bottom-contents .credits-card {
+  width: 80%;
+  padding: 25px 20px;
+  border-radius: 10px;
+  background-color: white;
+  font-family: var(--rocknRoll);
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+/* Styling for lines within the credits card */
+.credits-card .line {
+  color: black;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.credits-card .p {
+  color: #faba34;
+}
+
+/* Styling for anchor elements within lines */
+.line a {
+  color: blue;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* Styling for the form used for updating email and password in account settings */
+.updationForm-as {
+  width: 900px;
+  height: 250px !important;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  row-gap: 25px;
+}
+
+/* Styling for the form within the account settings */
+.updationForm-as form {
+  width: 100%;
+  height: 90%;
+  padding: 50px;
+  border-radius: 5px;
+  background-color: #f1f5f8;
+  display: flex;
+  flex-direction: column;
+  row-gap: 25px;
+}
+
+/* Styling for rows within the account settings form */
+.updationForm-as form .row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Styling for the second row within the account settings form */
+.row2 {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* Styling for labels within rows */
+.row label {
+  padding: 10px;
+  border: 2px solid black;
+  background-color: white;
+  border-radius: 5px;
+  font-family: var(--rocknRoll);
+}
+
+/* Styling for input elements within rows */
+.row input {
+  font-family: var(--rocknRoll);
+  padding: 0px 10px;
+}
+
+/* Styling for the first row of inputs */
+.row1 input {
+  width: 70%;
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: #eedd99;
+}
+
+/* Styling for the second row of inputs */
+.row2 input {
+  width: 33%;
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: #eedd99;
+}
+
+/* Styling for the update credentials button */
+.updationForm-as form .update-credentials-btn {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #00c87e;
+  color: white;
+  font-family: var(--prosto);
+}
+
+.popup {
+  width: 20vw;
+  height: 20vh;
+  border: 5px solid gold;
+  background-color: #f1f5f8;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: fixed;
+  top: 40%;
+  left: 40%;
+}
+
+.popup p {
+  background-color: transparent;
+  font-family: var(--ubuntu);
+}
+
+.popup button {
+  padding: 2% 5%;
+  border: 2px solid white;
+  border-radius: 5px;
+  color: white;
+  background-color: #00c87e;
+  font-family: var(--poppins);
+  font-weight: 600;
+}
+
+.error {
+  border-color: red;
+}
+
+/* Styling for the footer section */
+.footer {
+  width: 80.6vw;
+  height: 40px;
+  background-color: #3e454c;
+  color: white;
+  font-family: var(--rocknRoll);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+}
+
+@media (max-width: 768px) {
+  * {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+
+  .profile-settings-container {
+    width: 100vw;
+    height: auto;
+    overflow-y: scroll !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile-settings-container .topBar {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 25px;
+    order: 1;
+  }
+
+  .topBar .leftSide {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .topBar .rightSide {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .rightSide .userNameDisplay {
+    border-radius: 10px;
+    width: 100%;
+    height: 50px;
+  }
+
+  .userNameDisplay .greetings {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+  }
+
+  .userNameDisplay .greetings p {
+    font-size: 1em;
+    font-weight: 600;
+  }
+
+  .userNameDisplay .greetings h6 {
+    font-size: 2em;
+  }
+
+  .profile-settings-container .main-contents {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 75px;
+    order: 2;
+  }
+
+  .main-contents .updationForm-as {
+    width: 90%;
+    height: auto;
+    overflow: scroll;
+    border-radius: 5px;
+    background-color: #f1f5f8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+  }
+
+  .main-contents .updationForm-as form {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+    order: 1;
+  }
+
+  .main-contents .updationForm-as form .row {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+  }
+
+  .row label {
+    padding: 5px;
+    width: 200px;
+    border: 2px solid black;
+    background-color: white;
+    border-radius: 5px;
+    font-family: var(--rocknRoll);
+    font-size: 0.8em;
+  }
+
+  .row input {
+    padding: 0px 10px;
+    font-family: var(--rocknRoll);
+  }
+
+  form .row1 input {
+    width: 150px;
+    height: 35px;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: #eedd99;
+  }
+
+  form .row2 input {
+    width: 150px;
+    height: 35px;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: #eedd99;
+  }
+
+  form .row3 input {
+    width: 150px;
+    height: 35px;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: #eedd99;
+  }
+
+  form .row4 input {
+    width: 150px;
+    height: 35px;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: #eedd99;
+  }
+
+  form .row5 input {
+    width: 150px;
+    height: 35px;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: #eedd99;
+  }
+
+  .updationForm-as .update-btn {
+    order: 2;
+  }
+
+  .main-contents .sideBar {
+    width: 100%;
+    height: 400px;
+    background-color: #2c3135;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    position: static;
+    order: 2;
+  }
+
+  .main-contents .sideBar .top-contents {
+    width: 100%;
+    height: 30%;
+    padding: 15px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 15px;
+  }
+
+  .main-contents .sideBar .top-contents .links-div {
+    border-radius: 10px;
+    text-align: center;
+  }
+
+  .main-contents .sideBar .bottom-contents {
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .main-contents .sideBar .bottom-contents .credits-card {
+    width: 100%;
+    height: 90%;
+    background-color: white;
+    padding: 15px 15px;
+    border-radius: 10px;
+    font-family: var(--rocknRoll);
+    font-size: 0.8em;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+
+  .credits-card .line {
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .credits-card .p {
+    color: #faba34 !important;
+  }
+
+  .line a {
+    color: blue !important;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .popup {
+    width: 80vw;
+    height: 20vh;
+    position: fixed;
+    top: 50%;
+    left: 10%;
+  }
+
+  .profile-settings-container .footer {
+    order: 3;
+    width: 100%;
+    position: static;
+  }
+}

@@ -1,0 +1,576 @@
+/* Importing fonts from Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Julee&family=Just+Another+Hand&family=Kaushan+Script&family=Lobster&family=Pacifico&family=Playpen+Sans&family=Poppins&family=Prosto+One&family=Rampart+One&family=RocknRoll+One&family=Ubuntu&family=Waterfall&family=Zen+Tokyo+Zoo&display=swap");
+
+/* Global styling for all elements */
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+/* Common stylings and variables */
+:root {
+  --justAnotherHand: "Just Another Hand", cursive;
+  --kaushan: "Kaushan Script", cursive;
+  --lobster: "Lobster", sans-serif;
+  --pacifio: "Pacifico", cursive;
+  --playplen: "Playpen Sans", cursive;
+  --poppins: "Poppins", sans-serif;
+  --rocknRoll: "RocknRoll One", sans-serif;
+  --ubuntu: "Ubuntu", sans-serif;
+  --julee: "Julee", cursive;
+  --prosto: "Prosto One", sans-serif;
+  --rampart: "Rampart One", sans-serif;
+  --poetsen: "Poetsen One", sans-serif;
+  --waterfall: "Waterfall", cursive;
+  --zen-tokyo: "Zen Tokyo Zoo", cursive;
+}
+
+/* Styling for the main container of the profile settings */
+.profile-settings-container {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Styling for the top navigation bar */
+.topBar {
+  width: 100%;
+  padding: 20px 10px;
+  display: flex;
+  justify-content: space-between !important;
+  align-items: center;
+}
+
+/* Styling for the left and right sides of the top bar */
+.leftSide {
+  width: 10%;
+}
+
+.rightSide {
+  width: 90%;
+}
+
+/* Styling for the user name display area */
+.userNameDisplay {
+  width: 100%;
+  height: 100px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  background-color: #2c3135;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Styling for the greetings section within the user name display */
+.greetings {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 10px;
+}
+
+/* Styling for specific elements within the greetings section */
+.greetings p {
+  font-size: 50px;
+  font-family: var(--waterfall);
+}
+
+.greetings h6 {
+  font-size: 50px;
+  font-family: var(--zen-tokyo);
+  font-weight: 300;
+}
+
+/* Styling for the sidebar containing links and credits */
+.sideBar {
+  width: 18.75vw;
+  height: 85vh;
+  background-color: #2c3135;
+  color: white;
+  position: fixed;
+  right: 10px;
+  top: 120px;
+}
+
+/* Styling for the top and bottom contents of the sidebar */
+.sideBar .top-contents {
+  height: 50%;
+  padding: 50px 0px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 25px;
+}
+
+/* Styling for individual link divs within the top contents */
+.top-contents .links-div {
+  width: 200px;
+  background-color: white;
+  padding: 10px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  transition: all 0.2s linear 0s;
+}
+
+/* Styling for links within link divs */
+.top-contents a {
+  text-decoration: none;
+  font-family: var(--rocknRoll);
+  color: black;
+  transition: all 0.2s linear 0s;
+}
+
+/* Hover styles for link divs and links */
+.links-div:hover {
+  background-color: #1784c7;
+  color: white;
+}
+
+.links-div a:hover {
+  color: white;
+}
+
+/* Styling for the bottom contents of the sidebar */
+.sideBar .bottom-contents {
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Styling for the credits card within the bottom contents */
+.bottom-contents .credits-card {
+  width: 80%;
+  background-color: white;
+  padding: 25px 20px;
+  border-radius: 10px;
+  font-family: var(--rocknRoll);
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+/* Styling for individual lines within the credits card */
+.credits-card .line {
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Styling for specific elements within the credits card */
+.credits-card .p {
+  color: #faba34;
+}
+
+.line a {
+  color: blue;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* Styling for the form to update user details */
+.updationForm {
+  width: 900px;
+  height: 500px !important;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  row-gap: 25px;
+}
+
+/* Styling for the form and rows within the updation form */
+.updationForm form {
+  width: 100%;
+  height: 90%;
+  padding: 50px;
+  border-radius: 5px;
+  background-color: #f1f5f8;
+  display: flex;
+  flex-direction: column;
+  row-gap: 25px;
+}
+
+.updationForm form .row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Styling for labels within the rows */
+.row label {
+  padding: 10px;
+  border: 2px solid black;
+  background-color: white;
+  border-radius: 5px;
+  font-family: var(--rocknRoll);
+}
+
+/* Styling for input fields within the rows */
+.row input {
+  padding: 0px 10px;
+  font-family: var(--rocknRoll);
+}
+
+/* Additional styling for specific rows and input fields */
+.row1 input {
+  width: 70%;
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: #eedd99;
+}
+
+.row2 input {
+  width: 10%;
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: #eedd99;
+}
+
+.row3 input {
+  width: 60%;
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: #eedd99;
+}
+
+.row4 input {
+  width: 55%;
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: #eedd99;
+}
+
+.row5 input {
+  width: 65%;
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: #eedd99;
+}
+
+/* Styling for the update button within the updation form */
+.updationForm .update-btn {
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #00c87e;
+  color: white;
+  font-family: var(--prosto);
+}
+
+/* Styling for the footer section */
+.footer {
+  width: 80.6vw;
+  height: 40px;
+  background-color: #3e454c;
+  color: white;
+  font-family: var(--rocknRoll);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+}
+
+.popup {
+  position: fixed;
+  top: 10%;
+  right: 10%;
+  background-color: #4caf50;
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+  z-index: 1000;
+}
+
+/* Additional styling for specific rows and input fields */
+.row1 input,
+.row2 input,
+.row3 input,
+.row4 input,
+.row5 input,
+.row6 input {
+  width: 100%; /* Adjusted width to 100% for uniform length */
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: #eedd99;
+  padding: 10px;
+  box-sizing: border-box; /* Ensures padding is included in the width calculation */
+}
+/* Additional styling for specific rows and input fields */
+.row label {
+  width: 30%; /* Adjust width of labels to maintain consistency */
+  padding: 10px;
+  margin-right: 10px; /* Add margin for separation */
+  text-align: right; /* Align text to the right for labels */
+  font-family: var(--rocknRoll);
+}
+
+.row input {
+  flex: 1; /* Use flex to expand input to fill available space */
+  padding: 10px; /* Padding for input fields */
+  font-family: var(--rocknRoll);
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: #eedd99;
+}
+
+.updationForm {
+  width: 900px;
+  max-height: 500px; /* Limit maximum height to enable scrolling */
+  overflow-y: auto; /* Enable vertical scrolling */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  row-gap: 25px;
+}
+
+.updationForm form {
+  width: 100%;
+  padding: 50px;
+  border-radius: 5px;
+  background-color: #f1f5f8;
+  display: flex;
+  flex-direction: column;
+  row-gap: 25px;
+  overflow-y: auto; /* Enable scrolling inside the form */
+}
+
+@media (max-width: 768px) {
+  * {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+
+  .profile-settings-container {
+    width: 100vw;
+    height: auto;
+    overflow-y: scroll !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile-settings-container .topBar {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 25px;
+    order: 1;
+  }
+
+  .topBar .leftSide {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .topBar .rightSide {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .rightSide .userNameDisplay {
+    border-radius: 10px;
+    width: 100%;
+    height: 50px;
+  }
+
+  .userNameDisplay .greetings {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+  }
+
+  .userNameDisplay .greetings p {
+    font-size: 1em;
+    font-weight: 600;
+  }
+
+  .userNameDisplay .greetings h6 {
+    font-size: 2em;
+  }
+
+  .profile-settings-container .main-contents {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 75px;
+    order: 2;
+  }
+
+  .main-contents .updationForm {
+    width: 90%;
+    height: auto;
+    border-radius: 5px;
+    background-color: #f1f5f8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+  }
+
+  .main-contents .updationForm form {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+    order: 1;
+  }
+
+  .main-contents .updationForm form .row {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+  }
+
+  .row label {
+    padding: 5px;
+    width: 200px;
+    border: 2px solid black;
+    background-color: white;
+    border-radius: 5px;
+    font-family: var(--rocknRoll);
+    font-size: 0.8em;
+  }
+
+  .row input {
+    padding: 0px 10px;
+    font-family: var(--rocknRoll);
+  }
+
+  form .row1 input {
+    width: 150px;
+    height: 35px;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: #eedd99;
+  }
+
+  form .row2 input {
+    width: 150px;
+    height: 35px;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: #eedd99;
+  }
+
+  form .row3 input {
+    width: 150px;
+    height: 35px;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: #eedd99;
+  }
+
+  form .row4 input {
+    width: 150px;
+    height: 35px;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: #eedd99;
+  }
+
+  form .row5 input {
+    width: 150px;
+    height: 35px;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: #eedd99;
+  }
+
+  .updationForm .update-btn {
+    order: 2;
+  }
+
+  .main-contents .sideBar {
+    width: 100%;
+    height: 400px;
+    background-color: #2c3135;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    position: static;
+    order: 2;
+  }
+
+  .main-contents .sideBar .top-contents {
+    width: 100%;
+    height: 30%;
+    padding: 15px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 15px;
+  }
+
+  .main-contents .sideBar .top-contents .links-div {
+    border-radius: 10px;
+    text-align: center;
+  }
+
+  .main-contents .sideBar .bottom-contents {
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .main-contents .sideBar .bottom-contents .credits-card {
+    width: 100%;
+    height: 90%;
+    background-color: white;
+    padding: 15px 15px;
+    border-radius: 10px;
+    font-family: var(--rocknRoll);
+    font-size: 0.8em;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+
+  .credits-card .line {
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .credits-card .p {
+    color: #faba34 !important;
+  }
+
+  .line a {
+    color: blue !important;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .profile-settings-container .footer {
+    order: 3;
+    width: 100%;
+    position: static;
+  }
+}

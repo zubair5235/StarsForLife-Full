@@ -1,0 +1,491 @@
+/* Archives.css */
+
+/* Importing fonts from Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Julee&family=Just+Another+Hand&family=Kaushan+Script&family=Lobster&family=Pacifico&family=Playpen+Sans&family=Poppins&family=Prosto+One&family=Rampart+One&family=RocknRoll+One&family=Ubuntu&display=swap");
+
+/* Resetting default margin, padding, and box-sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Common stylings and variables defined using CSS variables */
+:root {
+  --justAnotherHand: "Just Another Hand", cursive;
+  --kaushan: "Kaushan Script", cursive;
+  --lobster: "Lobster", sans-serif;
+  --pacifio: "Pacifico", cursive;
+  --playplen: "Playpen Sans", cursive;
+  --poppins: "Poppins", sans-serif;
+  --rocknRoll: "RocknRoll One", sans-serif;
+  --ubuntu: "Ubuntu", sans-serif;
+  --julee: "Julee", cursive;
+  --prosto: "Prosto One", sans-serif;
+  --rampart: "Rampart One", sans-serif;
+  --poetsen: "Poetsen One", sans-serif;
+}
+
+/* Styling for the main container of the Archives component */
+.archives-container {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Styling for the top bar section */
+.topBar {
+  width: 100%;
+  padding: 20px 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.topBar .home-btn {
+  width: 100px;
+  height: 40px;
+  margin-left: 25px;
+  background-color: #1784c7;
+}
+
+/* Styling for the filters section */
+.filters {
+  width: 80vw;
+  padding: 10px 0px;
+  margin: 20px 0px;
+  background-color: #f7f8fc;
+  display: flex;
+  align-items: center;
+}
+
+.leftSide {
+  width: 40%;
+}
+
+.leftSide .filters-searchBar {
+  margin-left: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.filters-searchBar img {
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  background-color: white;
+}
+
+.filters-searchBar input {
+  height: 30px;
+  border: none;
+  font-family: var(--rocknRoll);
+}
+
+.filters-searchBar input:focus {
+  outline: none;
+}
+
+.rightSide {
+  width: 60%;
+  display: flex;
+  justify-content: flex-end;
+  column-gap: 15px;
+}
+
+.rightSide .filter input {
+  height: 30px;
+  border: none;
+  padding: 0px 5px;
+  font-family: var(--rocknRoll);
+}
+
+.rightSide .filter:last-child {
+  margin-right: 15px;
+}
+
+.filters input:hover {
+  outline: 2px solid black;
+}
+
+/* Styling for the images container */
+.images-container {
+  width: 90vw;
+  overflow-y: scroll;
+  min-height: 65vh;
+  margin-bottom: 25px;
+  background-color: #f7f8fc;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+
+.card {
+  width: calc(
+    100% - 20px
+  ); /* Calculate width for 4 cards per row with 20px gap */
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  transition: transform 0.3s ease-in-out;
+  position: relative; /* Ensure relative positioning for absolute content */
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  height: 80%;
+  display: block;
+  vertical-align: middle; /* Align image vertically within the card */
+}
+
+.card-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 20%;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 5px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.card:hover .card-content {
+  opacity: 1;
+}
+
+.card-content p {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 5px 0 0; /* Adjust margin to reduce space below text */
+}
+
+/* Styling for the download button */
+.card-content button {
+  background-color: #00ca80;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.card-content button:hover {
+  background-color: #00865d;
+}
+
+.filtersandbuttons {
+  width: 90vw;
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  margin: 20px 0px;
+}
+
+.filtersandbuttons .leftSide {
+  width: 50%;
+}
+
+.filtersandbuttons .rightSide {
+  width: 50%;
+  display: none;
+  justify-content: flex-end;
+  column-gap: 10px;
+}
+
+.rightSide button {
+  width: 40px;
+  height: 30px;
+  border-radius: 30%;
+  font-weight: 900;
+}
+
+.rightSide .previous-btn {
+  border: 1px solid black;
+  background-color: white;
+  color: #2699fb;
+}
+
+.rightSide .next-btn {
+  border: none;
+  background-color: #2699fb;
+  color: white;
+}
+
+.filtersandbuttons .upload-btn {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-family: var(--prosto);
+  background-color: #00ca80;
+  color: white;
+  margin-top: auto; /* Push the button to the bottom */
+  align-self: flex-end; /* Align to the end of the container */
+}
+
+/* Styling for the upload form container */
+.upload-form {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(217, 217, 217, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+/* Show class to display the upload form */
+.show {
+  display: flex;
+}
+
+.upload-form form {
+  width: 500px;
+  height: 500px;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Styling for the input container within the upload form */
+.upload-form .input-container {
+  width: 100%;
+  height: 80%;
+  border: 3px ridge black;
+  border-radius: 10px;
+  background-image: url(../Assets/PlaceHolder.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position-y: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-container input[type="file"] {
+  opacity: 0;
+}
+
+/* Styling for the bottom buttons within the upload form */
+.upload-form .bottom-buttons {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.bottom-buttons {
+  padding: 10px;
+}
+
+.bottom-buttons .cancel-btn {
+  padding: 10px;
+  width: 150px;
+  border: none;
+  border-radius: 5px;
+  background-color: red;
+  color: white;
+  font-family: var(--prosto);
+}
+
+.bottom-buttons .upload-btn {
+  padding: 10px;
+  width: 150px;
+  border: none;
+  border-radius: 5px;
+  background-color: #00ca80;
+  color: white;
+  font-family: var(--prosto);
+}
+
+/* Mobile view adjustments */
+@media (max-width: 768px) {
+  .filters {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .leftSide,
+  .rightSide {
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  .images-container {
+    display: grid;
+    overflow-y: scroll;
+    min-height: 65vh;
+    margin-bottom: 25px;
+    background-color: #f7f8fc;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 10px;
+  }
+
+  .card {
+    width: calc(
+      100% - 20px
+    ); /* Calculate width for 4 cards per row with 20px gap */
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    transition: transform 0.3s ease-in-out;
+    position: relative; /* Ensure relative positioning for absolute content */
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+  }
+
+  .card img {
+    width: 100%;
+    height: 80%;
+    display: block;
+    vertical-align: middle; /* Align image vertically within the card */
+  }
+
+  .card-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 5px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .card:hover .card-content {
+    opacity: 1;
+  }
+
+  .card-content p {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 5px 0 0; /* Adjust margin to reduce space below text */
+  }
+
+  /* Styling for the download button */
+  .card-content button {
+    background-color: #00ca80;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .card-content button:hover {
+    background-color: #00865d;
+  }
+
+  .filtersandbuttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .filtersandbuttons .leftSide,
+  .filtersandbuttons .rightSide {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .upload-form form {
+    width: 90%;
+    height: 60%;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  /* Styling for the input container within the upload form */
+  .upload-form .input-container {
+    width: 100%;
+    height: 70%;
+    border: 3px ridge black;
+    border-radius: 10px;
+    background-image: url(../Assets/PlaceHolder.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-y: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .input-container input[type="file"] {
+    opacity: 0;
+  }
+
+  /* Styling for the bottom buttons within the upload form */
+  .upload-form .bottom-buttons {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .bottom-buttons {
+    padding: 10px;
+  }
+
+  .bottom-buttons .cancel-btn {
+    padding: 10px;
+    width: 100px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: red;
+    color: white;
+    font-family: var(--prosto);
+  }
+
+  .bottom-buttons .upload-btn {
+    padding: 10px;
+    width: 125px;
+    border: none;
+    border-radius: 5px;
+    background-color: #00ca80;
+    color: white;
+    font-family: var(--prosto);
+  }
+}

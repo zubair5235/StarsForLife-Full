@@ -1,0 +1,373 @@
+/* Importing fonts from Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Julee&family=Just+Another+Hand&family=Kaushan+Script&family=Lobster&family=Pacifico&family=Playpen+Sans&family=Poppins&family=Prosto+One&family=Rampart+One&family=RocknRoll+One&family=Ubuntu&display=swap");
+
+/* Resetting default styles for all elements */
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+/* Common stylings and variables */
+:root {
+  --justAnotherHand: "Just Another Hand", cursive;
+  --kaushan: "Kaushan Script", cursive;
+  --lobster: "Lobster", sans-serif;
+  --pacifio: "Pacifico", cursive;
+  --playplen: "Playpen Sans", cursive;
+  --poppins: "Poppins", sans-serif;
+  --rocknRoll: "RocknRoll One", sans-serif;
+  --ubuntu: "Ubuntu", sans-serif;
+  --julee: "Julee", cursive;
+  --prosto: "Prosto One", sans-serif;
+  --rampart: "Rampart One", sans-serif;
+  --poetsen: "Poetsen One", sans-serif;
+}
+
+/* Styling for the main container of the StarsDay component */
+.starsday-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Styling for the top bar within the main container */
+.starsday-container .topBar {
+  width: 100%;
+}
+
+.topBar {
+  width: 100%;
+  padding: 20px 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* Styling for the home button within the top bar */
+.topBar .home-btn {
+  width: 100px;
+  height: 40px;
+  margin-left: 25px;
+  background-color: #1784c7;
+}
+
+/* Styling for the agenda container within the main container */
+.starsday-container .agenda-container {
+  width: 90vw;
+  min-height: 90vh;
+  padding: 20px;
+  margin-bottom: 100px;
+  background-color: #f7f8fc;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+/* Styling for the buttons within the bottom items of the agenda container */
+.agenda-container .bottom-items {
+  width: 250px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.bottom-items .register-btn {
+  padding: 10px 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #00c87e;
+  color: white;
+  font-family: var(--prosto);
+}
+
+.bottom-items .participate-btn {
+  padding: 0px 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #faba34;
+  color: black;
+  font-family: var(--prosto);
+}
+
+/* Styling for the participation details table within the main container */
+.starsday-container .participation-details-table {
+  width: 80vw;
+  margin: 20px 0px;
+}
+
+/* Styling for the table within the participation details table */
+.participation-details-table table {
+  width: 100%;
+  border: 2px solid black;
+  font-family: var(--playplen);
+}
+
+/* Styling for the table header */
+table thead {
+  background-color: #36304a;
+  color: white;
+}
+
+/* Styling for table rows on hover */
+table tbody tr:hover {
+  background-color: #0342ff;
+  color: white;
+  transition: all 0.2s linear 0s;
+}
+
+/* Styling for even rows in the table */
+table tbody tr:nth-of-type(even) {
+  background-color: #f7f8fc;
+  color: black !important;
+}
+
+/* Styling for even rows on hover */
+table tbody tr:nth-of-type(even):hover {
+  background-color: #0342ff;
+  color: white;
+  transition: all 0.2s linear 0s;
+}
+
+/* Styling for table cells */
+table tbody td {
+  padding: 5px 0px;
+  text-align: center;
+}
+
+/* Styling for table filters container within the main container */
+.starsday-container .table-filters {
+  width: 80vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Styling for the left side of the table filters */
+.table-filters .leftSide {
+  width: 50%;
+}
+
+/* Styling for the content filter within the left side of table filters */
+.leftSide .content-filter {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+
+/* Styling for the input in the content filter */
+.content-filter input {
+  width: 50px;
+  border-radius: 5px;
+}
+
+/* Styling for the right side of the table filters */
+.table-filters .rightSide {
+  display: flex;
+  column-gap: 10px;
+}
+
+/* Styling for the buttons in the right side of the table filters */
+.rightSide button {
+  width: 40px;
+  height: 30px;
+  border-radius: 30%;
+  font-weight: 900;
+}
+
+.rightSide .previous-btn {
+  border: 1px solid black;
+  background-color: white;
+  color: #2699fb;
+}
+
+.rightSide .next-btn {
+  border: none;
+  background-color: #2699fb;
+  color: white;
+}
+
+/* Styling for the participation form container */
+.participation-form-container {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(217, 217, 217, 50%);
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0%;
+}
+
+/* Styling for the 'show' class to display the participation form */
+.show {
+  display: flex;
+}
+
+/* Styling for the participation form */
+.pf-form {
+  width: 50%;
+  height: 650px;
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: white;
+}
+
+/* Styling for the header within the participation form */
+.pf-form .pf-form-header {
+  width: 100%;
+  height: 10%;
+  padding: 0px 25px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  background-color: #00ca80;
+  color: white;
+  font-family: var(--prosto);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+/* Styling for the paragraph within the header */
+.pf-form-header p {
+  padding-right: 125px;
+}
+
+/* Styling for the form within the participation form */
+.pf-form form {
+  width: 100%;
+  height: 90%;
+  padding: 50px 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  row-gap: 10%;
+}
+
+/* Styling for the first row of the form */
+.pf-form form .pf-row1 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Styling for the second row of the form */
+.pf-form form .pf-row2 {
+  width: 100%;
+}
+
+.pf-row2 input {
+  min-width: 100%;
+}
+
+/* Styling for the third row of the form */
+.pf-row3 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.pf-row3 .add-member-btn {
+  border: none;
+  border-radius: 5px;
+  padding: 10px 5px;
+  background-color: #1784C7;
+  color: white;
+  font-family: var(--prosto);
+}
+
+/* Styling for the fourth row of the form */
+.pf-row4 {
+  width: 100%;
+}
+
+.pf-row4 textarea {
+  min-width: 100%;
+  height: 150px;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #eedd99;
+  font-family: var(--rocknRoll);
+}
+
+/* Styling for the participate button */
+.participate-btn {
+  width: 150px;
+  height: 50px;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 5px;
+  background-color: #00ca80;
+  color: white;
+  font-family: var(--poppins);
+}
+
+/* Styling for the form inputs */
+.pf-form form input {
+  width: 250px;
+  height: 50px;
+  border-radius: 5px;
+  padding: 0px 10px;
+  background-color: #eedd99;
+  font-family: var(--rocknRoll);
+  color: black;
+}
+
+/* Styling for the placeholder text in form inputs */
+.pf-form form input::placeholder {
+  color: black;
+}
+
+/* Styling for the registered popup container */
+.registeredPopup {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(217, 217, 217, 50%);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0%;
+}
+
+/* Styling for the 'show' class to display the registered popup */
+.show {
+  display: flex;
+}
+
+/* Styling for the popup within the registered popup container */
+.popup {
+  width: 500px;
+  height: 300px;
+  padding-top: 100px;
+  padding-bottom: 50px;
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: white;
+  color: black !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Styling for the paragraph within the popup */
+.popup p {
+  background-color: #f7f8fc;
+  font-family: var(--poppins);
+}
+
+/* Styling for the 'Done' button within the popup */
+.done-btn {
+  background-color: #00c87e;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-family: var(--prosto);
+}
